@@ -46,7 +46,6 @@ def draw_ui(x, y):
     print("-------------------------")
     print(f"Coins: {player['coin']}")
     print("=========================")
-    print("Your move (w/a/s/d/q):")
 
 def move(direction):
     global player
@@ -58,10 +57,6 @@ def move(direction):
         player["y"] -= 1
     elif direction == "d" and player["y"] < map_size - 1:
         player["y"] += 1
-    elif direction == "a" and player["x"] > 0:
-        player["x"] -= 1
-    elif direction == "d" and player["x"] < map_size - 1:
-        player["x"] += 1
     else:
         print("You cannot move that way!")
 
